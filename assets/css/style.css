@@ -1,0 +1,219 @@
+/*PreEntrega1 | Muñoz*/
+
+/*reset*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background: #222121;
+    color: #dfdddd;
+    line-height: 1.5;
+    padding-top: 140px;
+}
+
+/*header*/
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: linear-gradient(90deg, #ac0f0f, #8b0c0c);
+    border-bottom: 5px solid #00070a;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.header__logo {
+    width: 160px;
+    transition: transform 0.3s ease;
+}
+
+.header__logo:hover {
+    transform: scale(1.1);
+}
+
+.header__nav .nav-link {
+    color: #fff;
+    font-weight: bold;
+    margin-right: 10px;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.header__nav .nav-link::after {
+    content: '';
+    display: block;
+    height: 3px;
+    width: 0;
+    background: #11e711;
+    transition: width 0.3s ease;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+}
+
+.header__nav .nav-link:hover::after,
+.header__nav .nav-link.active::after {
+    width: 100%;
+}
+
+.header__nav .nav-link:hover,
+.header__nav .nav-link.active {
+    color: #11e711;
+}
+
+section {
+    border: 4px solid #00070a;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.8);
+}
+
+.welcome-section,
+.call-to-action,
+.about-section,
+.teams-intro,
+.intro-torneos,
+.contact-form-section {
+    padding: 20px;
+    background: linear-gradient(145deg, #ac0f0f, #8b0c0c);
+}
+
+/*textos*/
+.text-light {
+    color: #dfdddd;
+}
+
+.text-danger {
+    color: #ff0000;
+}
+
+/*joystick animado*/
+.joystick {
+    font-size: 4rem;
+    text-align: center;
+    animation: float 2s ease-in-out infinite;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/*logos*/
+.logo-section__img {
+    max-width: 150px;
+    transition: transform 0.3s ease;
+}
+
+.logo-section__img:hover {
+    transform: rotate(-5deg) scale(1.1);
+}
+
+.logos-finales img {
+    width: 80px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.logos-finales img:hover {
+    transform: scale(1.3) rotate(-5deg);
+    filter: drop-shadow(0 0 10px #11e711);
+}
+
+/*formulario*/
+.formulario input,
+.formulario textarea {
+    border-radius: 5px;
+    border: 2px solid #00070a;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.formulario input:focus,
+.formulario textarea:focus {
+    outline: none;
+    border-color: #11e711;
+    box-shadow: 0 0 10px #11e711;
+}
+
+.btn-success:hover {
+    background-color: #0bb20b;
+    transform: scale(1.05);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-danger:hover {
+    background-color: #cc0000;
+    transform: scale(1.05);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/*redes*/
+.redes a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.redes a:hover {
+    text-decoration: underline;
+    color: #11e711;
+    transform: scale(1.1);
+}
+
+/*videos*/
+.video-section__iframe {
+    width: 100%;
+    aspect-ratio: 16/9;
+    border: none;
+}
+
+/*cards*/
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 25px rgba(17, 231, 17, 0.6);
+}
+
+/*footer*/
+.footer {
+    background: linear-gradient(90deg, #720505, #510303);
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/*media*/
+@media (min-width: 768px) {
+    .joystick {
+        font-size: 5rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .joystick {
+        font-size: 6rem;
+    }
+}
