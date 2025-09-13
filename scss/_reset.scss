@@ -1,0 +1,13 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-main;
+  background: $color-bg;
+  color: $color-light;
+  line-height: 1.5;
+  padding-top: 140px;
+}

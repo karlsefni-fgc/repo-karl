@@ -1,0 +1,7 @@
+.footer {
+  background: $gradient-footer;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  @include box-shadow(0, -4px, 10px, rgba(0, 0, 0, 0.5));
+}

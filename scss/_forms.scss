@@ -1,0 +1,50 @@
+.formulario {
+  display: grid;
+  gap: 1rem;
+
+  input,
+  textarea {
+    border-radius: 5px;
+    border: 2px solid #00070a;
+    @include transition(border-color, box-shadow);
+
+    &:focus {
+      outline: none;
+      border-color: $color-accent;
+      box-shadow: 0 0 10px $color-accent;
+    }
+  }
+}
+
+.btn-success:hover {
+  background-color: #0bb20b;
+  transform: scale(1.05);
+  @include transition(background-color, transform);
+}
+
+.btn-danger:hover {
+  background-color: #cc0000;
+  transform: scale(1.05);
+  @include transition(background-color, transform);
+}
+
+/* Redes */
+.redes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+
+  a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    @include transition(color, transform);
+
+    &:hover {
+      text-decoration: underline;
+      color: $color-accent;
+      transform: scale(1.1);
+    }
+  }
+}

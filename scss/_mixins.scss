@@ -1,0 +1,7 @@
+@mixin transition($props...) {
+  transition: $props 0.3s ease;
+}
+
+@mixin box-shadow($x, $y, $blur, $color) {
+  box-shadow: $x $y $blur $color;
+}

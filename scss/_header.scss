@@ -1,0 +1,78 @@
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: $gradient-header;
+  border-bottom: 5px solid #00070a;
+  @include box-shadow(0, 4px, 15px, rgba(0, 0, 0, 0.5));
+  z-index: 1000;
+  @include transition(all);
+
+  &__logo {
+    width: 160px;
+    @include transition(transform);
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  &__nav {
+    .nav-link {
+      color: #fff;
+      font-weight: bold;
+      margin-right: 10px;
+      position: relative;
+      @include transition(color);
+
+      &::after {
+        content: '';
+        display: block;
+        height: 3px;
+        width: 0;
+        background: $color-accent;
+        @include transition(width);
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+      }
+
+      &:hover,
+      &.active {
+        color: $color-accent;
+
+        &::after {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+/* Menú hamburguesa */
+.menu-toggle {
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  z-index: 1100;
+}
+
+.nav-menu {
+  display: none;
+
+  &.active {
+    display: block;
+  }
+}
+
+@media (min-width: 768px) {
+  .menu-toggle {
+    display: none;
+  }
+
+  .nav-menu {
+    display: block !important;
+  }
+}
