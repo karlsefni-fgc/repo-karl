@@ -1,0 +1,16 @@
+{
+  "name": "valquiria-esports",
+  "version": "1.0.0",
+  "description": "Proyecto Valquiria eSports con HTML, SCSS y npm-scripts",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass assets/scss/main.scss assets/css/style.css",
+    "sass:watch": "sass --watch assets/scss/main.scss assets/css/style.css"
+  },
+  "keywords": [],
+  "author": "Tu Nombre",
+  "license": "MIT",
+  "devDependencies": {
+    "sass": "^1.80.0"
+  }
+}
